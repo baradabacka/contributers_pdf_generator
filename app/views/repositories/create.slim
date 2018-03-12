@@ -1,0 +1,8 @@
+.background-container
+  .background-container-with-image
+  .cont
+    .label= 'Список ссылок для скачивания пдф файла указанных пользователей'
+    - @result.each do |s|
+      .flex-container
+        .label= s.name.capitalize
+        .label= link_to "http://localhost:3000/contributors/#{s.id}.pdf", "http://localhost:3000/contributors/#{s.id}.pdf"
