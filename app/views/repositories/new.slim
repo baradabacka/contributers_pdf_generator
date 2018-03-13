@@ -1,0 +1,9 @@
+.background-container
+  .background-container-with-image
+  = simple_form_for :repository, url: repositories_path, html: { class: 'form-inline flex-container' } do |f|
+    .form-group
+      .label https://github.com/
+      = f.input :organization, label: false, required: false
+      .label= '/'
+      = f.input :repos_name, label: false, required: false
+    = f.submit class: 'btn btn-primary m-l-10'
